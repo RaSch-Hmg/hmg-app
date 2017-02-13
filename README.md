@@ -2,4 +2,4 @@
 this is a Feed-Reader for local community Hauptmannsgrün
 
 
-![stack Overflow](http://lmsotfy.com/so.png)
+![App-Sreen](https://github.com/RaSch-Hmg/hmg-app/blob/master/Screen1.png)
