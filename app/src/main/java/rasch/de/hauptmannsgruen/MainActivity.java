@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         String summary = "<html><body>Loading ...</body></html>";
         webView.loadData(summary, "text/html", null);
 
-        webView.loadUrl("http://rasch.myhmg.de/hmgFeed.php");
+        webView.loadUrl("http://rasch.myhmg.de/myHmgFeed/hmgFeed.php");
 
     }
 
