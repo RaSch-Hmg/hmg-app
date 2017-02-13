@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     	try{
     		
     		final Dialog dialog = new Dialog(this);
-    		dialog.setContentView(R.layout.gps_dlg);
+    		dialog.setContentView(R.layout.about_dlg);
     		dialog.setTitle("Info..." );
    
 	 		Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
