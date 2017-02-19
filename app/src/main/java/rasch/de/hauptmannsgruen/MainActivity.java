@@ -1,5 +1,6 @@
 package rasch.de.hauptmannsgruen;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,6 +10,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,11 +48,11 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-		switch(item.getItemId()) {
-			case R.id.menuitem_app:
+        //if (id == R.id.action_settings) {
+        //    return true;
+        //}
+        switch (item.getItemId()) {
+            case R.id.action_settings:
 				/*
 				Intent intent = new Intent(MainActivity.this, WebActivity.class);
 				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -58,13 +61,15 @@ public class MainActivity extends AppCompatActivity {
 				startActivity(intent);
 				return true;
 				*/
-			case R.id.menuitem_gps:
-				doDialogAbout();
-				return true;
-			default:
-				return super.onOptionsItemSelected(item);
+                doDialogAbout();
+                return true;
+            /*case R.id.menuitem_gps:
+                doDialogAbout();
+                return true;*/
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
-	
 	
 	/**
 	 * 
@@ -78,9 +83,9 @@ public class MainActivity extends AppCompatActivity {
     		dialog.setTitle("Info..." );
    
 	 		Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
-	 		TextView dialogText = (TextView) dialog.findViewById(R.id.textView1);
+	 		//TextView dialogText = (TextView) dialog.findViewById(R.id.textView1);
 	 		
-	 		dialogButton.setOnClickListener(new OnClickListener() {
+	 		dialogButton.setOnClickListener(new View.OnClickListener() {
 	  				@Override
 	  				public void onClick(View v) {
 	  					dialog.dismiss();
