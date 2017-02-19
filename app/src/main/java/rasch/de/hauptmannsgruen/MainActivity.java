@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         String summary = "<html><body>Loading ...</body></html>";
         webView.loadData(summary, "text/html", null);
 
-        webView.loadUrl("http://rasch.myhmg.de/hmgFeed.php");
+        webView.loadUrl("http://rasch.myhmg.de/myHmgFeed/hmgFeed.php");
 
     }
 
@@ -48,7 +48,51 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
-        return super.onOptionsItemSelected(item);
+		switch(item.getItemId()) {
+			case R.id.menuitem_app:
+				/*
+				Intent intent = new Intent(MainActivity.this, WebActivity.class);
+				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				intent.putExtra("LatValue", (int)39485000); 
+				intent.putExtra("LongValue", (int)-80142777);
+				startActivity(intent);
+				return true;
+				*/
+			case R.id.menuitem_gps:
+				doDialogAbout();
+				return true;
+			default:
+				return super.onOptionsItemSelected(item);
     }
+	
+	
+	/**
+	 * 
+	*/
+    private void doDialogAbout() {
+    	
+    	try{
+    		
+    		final Dialog dialog = new Dialog(this);
+    		dialog.setContentView(R.layout.about_dlg);
+    		dialog.setTitle("Info..." );
+   
+	 		Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
+	 		TextView dialogText = (TextView) dialog.findViewById(R.id.textView1);
+	 		
+	 		dialogButton.setOnClickListener(new OnClickListener() {
+	  				@Override
+	  				public void onClick(View v) {
+	  					dialog.dismiss();
+	  				}
+	  		});
+	  		dialog.show();
+	  		
+	    }catch(Exception e) {
+	    }
+	}
+	
+	
+	
+	
 }
