@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Hauptmannsgrün</string>
     <string name="action_settings">Info</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="head_news_fragment">Hello News fragment</string>
+    <string name="head_events_fragment">Hello Events fragment</string>
 </resources>

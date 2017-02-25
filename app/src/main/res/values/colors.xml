@@ -36,9 +36,9 @@
         <item>@color/bgGelbColor</item>
         <item>@color/bgGrauColor</item>
     </integer-array>
-    
-    
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="colorPrimary">#009846</color>
+    <color name="colorPrimaryDark">#FFED00</color>
+    <color name="colorAccent">#FFED00</color>
 </resources>
